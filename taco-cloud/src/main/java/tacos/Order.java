@@ -1,5 +1,7 @@
 package tacos;
 
+import java.util.Date;
+
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.NotBlank;
@@ -9,6 +11,8 @@ import lombok.Data;
 
 @Data
 public class Order {
+	private Long id;
+	private Date createdAt;
 
 	@NotBlank(message="Name is required")
 	private String deliveryName;
